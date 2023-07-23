@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS Tasks (
+    Id INT NOT NULL AUTO_INCREMENT,
+    Name LONGTEXT NOT NULL,
+    Description LONGTEXT NOT NULL,
+    Category INT NOT NULL,
+    PRIMARY KEY(Id),
+    FOREIGN KEY (Category) REFERENCES TasksCategories(Id)
+);

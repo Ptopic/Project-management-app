@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS ProjectTasks (
+    Id INT NOT NULL AUTO_INCREMENT,
+    UserId VARCHAR(255) NOT NULL,
+    ProjectId INT NOT NULL,
+    TaskId INT NOT NULL,
+    PRIMARY KEY(Id),
+    FOREIGN KEY (UserId) REFERENCES Users(Id),
+    FOREIGN KEY (ProjectId) REFERENCES Projects(ProjectId),
+    FOREIGN KEY (TaskId) REFERENCES Tasks(Id)
+);

@@ -1,0 +1,60 @@
+Users -> Users ✔️
+
+- Register user ✔️
+- Login user ✔️
+returns jwt token that will be saved to cookie
+
+
+
+Tags -> For Programer, Ui designer ect tags for user profile
+
+- Create tag - JWT
+- View tags - JWT
+
+
+
+UserTags -> Assing tags to users
+
+- Assing tag to user - JWT
+
+
+
+Projects -> Contains projects
+
+- Creat projects - JWT
+- View project info by id - JWT
+- Search projects by name (WHERE name LIKE '%query%') - JWT
+
+
+
+UsersProjects -> Connects users to different projects (Get ProjectsID where user id is something then get those projects from projects table
+
+- Assign user to project (join project) - JWT
+Myb add roles to user that can authenticate user joining to projects - JWT
+
+
+
+TasksCategories -> Categories for tasks (New request, In Progress, Complete ...)
+
+- Create task category - JWT
+- View task categories - JWT
+
+
+
+Tasks -> Contains Task names
+
+- Create task for project - JWT
+
+
+
+ProjectTasks -> Links tasks and projects together then tasks can be displayed by tag for certain projects
+
+- View project tasks by project id - JWT
+
+
+
+Favorites -> Favorite projects for user
+
+- Add specific project (projectId) for specific user (user Id) - JWT
+- View favorite projects by user id - JWT
+

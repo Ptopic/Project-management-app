@@ -1,0 +1,39 @@
+:root {
+  --primary: #216ce7;
+  --secondary: '';
+  --background800: #ebeff2;
+  --background700: #f0f4f5;
+  --background600: #f3f6f8;
+  --background500: #ffffff;
+  --gray500: rgb(200, 200, 200);
+  --success: rgba(0, 255, 0, 0.7);
+  --error: rgba(255, 0, 0, 0.7);
+  --errorText: #f44336;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-family: 'ProductSansRegular', sans-serif;
+}
+
+/* Fonts */
+
+@font-face {
+  font-family: "ProductSansRegular";
+  src: local("ProductSansRegular"),
+    url("./assets/fonts/ProductSansRegular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "ProductSansBold";
+  src: local("ProductSansBold"),
+    url("./assets/fonts/ProductSansBold.ttf") format("truetype");
+}

@@ -1,0 +1,199 @@
+html,
+body {
+    height: 100%;
+}
+
+
+button,
+input {
+    border: 0;
+    width: 100%;
+    height: 60px;
+    background: transparent;
+    font-family: inherit;
+    font-size: 16px;
+    outline: none;
+}
+
+@keyframes clouds {
+    100% {
+        translate: -50vw -55%;
+        scale: 1 1.1;
+    }
+}
+
+.notification-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+}
+
+.notification {
+    padding: 2rem 5rem;
+    font-size: 1.6rem;
+    color: white;
+}
+
+.clouds {
+    position: fixed;
+    top: 30%;
+    left: 0;
+    width: 3000px;
+    height: 1500px;
+    translate: 0% -50%;
+    animation: clouds 15s infinite alternate linear;
+}
+
+.register {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1/1;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    height: 100%;
+    max-width: 60%;
+    padding: 20px 70px;
+    background: #111820;
+}
+
+.register>h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0 0 0px;
+    color: rgb(255 255 255 / 96%);
+}
+
+.register>h3 {
+    grid-column: 1/1;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 10px;
+    color: rgb(255 255 255 / 40%);
+}
+
+.form {
+    grid-column: 1/1;
+    margin: 0;
+    display: grid;
+    gap: 16px;
+}
+
+.error {
+    font-size: 1.4rem;
+    color: var(--errorText);
+}
+
+.textbox {
+    position: relative;
+    margin-bottom: 16px;
+    font-size: 1.6rem;
+}
+
+.textbox span {
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    left: 0;
+    font-size: 22px;
+    pointer-events: none;
+    color: rgb(255 255 255 / 40%);
+}
+
+.textbox div {
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    right: 0;
+    font-size: 22px;
+    cursor: pointer;
+    color: rgb(255 255 255 / 40%);
+}
+
+.textbox input {
+    padding: 0 24px 0 36px;
+    border-bottom: 2px solid #2b3442;
+    color: rgb(255 255 255 / 96%);
+    height: 72px;
+}
+
+:is(input:focus, input:valid)~label {
+    translate: -40px -40px;
+    scale: 0.875;
+}
+
+input:focus~label {
+    color: var(--primary);
+}
+
+input:focus {
+    border-color: var(--primary);
+}
+
+:is(input:focus, input:valid)~span {
+    color: rgb(255 255 255 / 96%);
+}
+
+.textbox label {
+    position: absolute;
+    top: 50%;
+    left: 36px;
+    translate: 0 -50%;
+    color: rgb(255 255 255 / 40%);
+    pointer-events: none;
+    transition: 0.4s;
+}
+
+.form button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 0 24px;
+    border-radius: 6px;
+    background: var(--primary);
+    color: #f9f9f9;
+    border: 0;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+.register p {
+    font-size: 1.4rem;
+    margin: 0 0 22px;
+    color: #778395;
+}
+
+.register p>a {
+    font-size: 1.4rem;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.password-requirements {
+    padding: 20px 70px;
+    grid-column: 2/2;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.password-requirements h1 {
+    color: var(--primary);
+    padding: 2rem 0;
+}
+
+.password-requirements div {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.password-requirements div svg {
+    padding-right: 1rem;
+}
